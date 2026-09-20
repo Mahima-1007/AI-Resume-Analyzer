@@ -1,0 +1,67 @@
+[
+    {
+        "id": "job_1",
+        "title": "Software Engineering Intern",
+        "company": "Google",
+        "location": "Bangalore / Remote",
+        "skills": [
+            "Python",
+            "Algorithms",
+            "Data Structures",
+            "Cloud Computing"
+        ],
+        "description": "Join our cloud team to build scalable infrastructure. Ideal for students with strong coding fundamentals."
+    },
+    {
+        "id": "job_2",
+        "title": "Frontend Developer",
+        "company": "Meta",
+        "location": "Hyderabad",
+        "skills": [
+            "React",
+            "JavaScript",
+            "Tailwind CSS",
+            "UI/UX"
+        ],
+        "description": "Looking for creative developers to build interactive user interfaces using React and modern CSS frameworks."
+    },
+    {
+        "id": "job_3",
+        "title": "Data Analyst",
+        "company": "Amazon",
+        "location": "Chennai",
+        "skills": [
+            "SQL",
+            "Python",
+            "Tableau",
+            "Statistics"
+        ],
+        "description": "Help us derive insights from massive datasets. Proficiency in SQL and Python is a must."
+    },
+    {
+        "id": "job_4",
+        "title": "AI/NLP Research Intern",
+        "company": "Microsoft",
+        "location": "Bangalore",
+        "skills": [
+            "Natural Language Processing",
+            "Transformers",
+            "PyTorch",
+            "SpaCy"
+        ],
+        "description": "Research internship focused on LLMs and semantic search optimization."
+    },
+    {
+        "id": "job_5",
+        "title": "Full Stack Developer",
+        "company": "Netflix",
+        "location": "Mumbai / Remote",
+        "skills": [
+            "FastAPI",
+            "Next.js",
+            "PostgreSQL",
+            "Docker"
+        ],
+        "description": "Build end-to-end features for content delivery platforms. Full stack experience with Python and React."
+    }
+]

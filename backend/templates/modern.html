@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 10.5pt;
+            color: #1e293b;
+            line-height: 1.5;
+        }
+
+        .header {
+            background-color: #f1f5f9;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .name {
+            font-size: 28pt;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 5px;
+        }
+
+        .title {
+            font-size: 14pt;
+            color: #3b82f6;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact {
+            font-size: 9pt;
+            color: #64748b;
+            margin-top: 10px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .section-title {
+            font-size: 15pt;
+            font-weight: bold;
+            color: #0f172a;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 12pt;
+            color: #1e293b;
+        }
+
+        .item-meta {
+            font-size: 10pt;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .item-subtitle {
+            font-style: italic;
+            color: #3b82f6;
+            font-size: 10.5pt;
+            margin-bottom: 5px;
+        }
+
+        .skills-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .badge {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 9pt;
+            font-weight: 600;
+            display: inline-block;
+            margin: 2px 4px;
+        }
+
+        ul {
+            margin-top: 5px;
+            padding-left: 20px;
+            color: #334155;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        .links {
+            margin-top: 10px;
+            font-size: 9pt;
+        }
+
+        .links a {
+            color: #3b82f6;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="name">{{ name | default("ALEXANDER WRIGHT") }}</div>
+        {% if title %}<div class="title">{{ title }}</div>{% else %}<div class="title">Senior Software Engineer</div>{%
+        endif %}
+        <div class="contact">
+            {{ email | default("alexander.wright@email.com") }} • {{ phone | default("+1 (555) 123-4567") }}
+        </div>
+        <div class="links">
+            {% if linkedin %}<a href="{{ linkedin }}">LinkedIn: {{ linkedin }}</a>{% endif %}
+            {% if github %}<a href="{{ github }}">GitHub: {{ github }}</a>{% endif %}
+        </div>
+    </div>
+
+    {% if summary %}
+    <div class="section-title">Professional Summary</div>
+    <div class="item">
+        <p>{{ summary }}</p>
+    </div>
+    {% endif %}
+
+    <div class="section-title">Core Competencies</div>
+    <div class="item skills-badges">
+        {% if skills %}
+        {% for skill in skills %}
+        <span class="badge">{{ skill }}</span>
+        {% endfor %}
+        {% else %}
+        <span class="badge">React</span><span class="badge">Node.js</span><span class="badge">Problem Solving</span>
+        {% endif %}
+    </div>
+
+    <div class="section-title">Professional Experience</div>
+    {% for exp in experience %}
+    {% if exp.company %}
+    <div class="item">
+        <div class="item-header">
+            <span class="item-title">{{ exp.role }}</span>
+            <span class="item-meta">{{ exp.duration }}</span>
+        </div>
+        <div class="item-subtitle">{{ exp.company }}</div>
+        {% set bullets = exp.description.split('\n') %}
+        {% if bullets %}
+        <ul>
+            {% for bullet in bullets %}
+            {% if bullet.strip() %}<li>{{ bullet.strip().lstrip('•').strip() }}</li>{% endif %}
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    {% endif %}
+    {% else %}
+    <div class="item">
+        <div class="item-title">Role</div>
+        <div class="item-subtitle">Company</div>
+    </div>
+    {% endfor %}
+
+    {% if projects and projects[0].title %}
+    <div class="section-title">Key Projects</div>
+    {% for proj in projects %}
+    {% if proj.title %}
+    <div class="item">
+        <div class="item-title">{{ proj.title }}</div>
+        {% if proj.technologies %}<div class="item-subtitle" style="font-size: 9pt; color: #64748b;">Tech: {{
+            proj.technologies }}</div>{% endif %}
+        <p style="margin-top: 5px;">{{ proj.description }}</p>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+
+    <div class="section-title">Education</div>
+    {% for edu in education %}
+    {% if edu.institution %}
+    <div class="item">
+        <div class="item-header">
+            <span class="item-title">{{ edu.degree }}</span>
+            <span class="item-meta">{{ edu.year }}</span>
+        </div>
+        <div class="item-subtitle">{{ edu.institution }}</div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</body>
+
+</html>

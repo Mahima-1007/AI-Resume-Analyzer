@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+sqlalchemy
+bcrypt
+pyjwt
+spacy
+sentence-transformers
+scikit-learn
+python-multipart
+PyPDF2
+python-docx
+reportlab
+pydantic-settings

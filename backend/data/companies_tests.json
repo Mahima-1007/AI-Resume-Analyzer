@@ -1,0 +1,58 @@
+{
+    "google": {
+        "name": "Google",
+        "rounds": [
+            "Online Assessment (Coding)",
+            "Technical Phone Screen",
+            "4-5 Onsite Rounds (Coding, System Design)",
+            "Googliness/Behavioral"
+        ],
+        "preparation_tips": [
+            "Master LeetCode Medium/Hard",
+            "Study Big-O notation",
+            "Prepare for open-ended design questions"
+        ]
+    },
+    "meta": {
+        "name": "Meta (Facebook)",
+        "rounds": [
+            "Technical Phone Screen",
+            "Product Architecture Round",
+            "Coding Interview",
+            "Jedi (Behavioral)"
+        ],
+        "preparation_tips": [
+            "Focus on Product Architecture",
+            "Solve common LC tags for Facebook",
+            "Show passion for product impact"
+        ]
+    },
+    "amazon": {
+        "name": "Amazon",
+        "rounds": [
+            "Online Assessment",
+            "Technical Rounds",
+            "Bar Raiser Round",
+            "Leadership Principles Interview"
+        ],
+        "preparation_tips": [
+            "Memorize all 16 Leadership Principles",
+            "Prepare STAR stories for each LP",
+            "Solid DSA knowledge"
+        ]
+    },
+    "microsoft": {
+        "name": "Microsoft",
+        "rounds": [
+            "OA",
+            "Codility Test",
+            "Technical Rounds",
+            "AA (Final Round)"
+        ],
+        "preparation_tips": [
+            "Focus on fundamentals",
+            "Be clear in communication during coding",
+            "System design basics"
+        ]
+    }
+}

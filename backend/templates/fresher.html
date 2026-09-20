@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 10pt;
+            color: #2d3748;
+            line-height: 1.4;
+        }
+
+        .header {
+            background-color: #ebf8ff;
+            padding: 20px;
+            border-left: 4px solid #3182ce;
+            margin-bottom: 20px;
+        }
+
+        .name {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #2a4365;
+            margin-bottom: 5px;
+        }
+
+        .contact {
+            font-size: 9pt;
+            color: #4a5568;
+        }
+
+        .section-title {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #3182ce;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 4px;
+        }
+
+        /* Grid for Education and Projects */
+        .grid {
+            display: block;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        .grid-item {
+            margin-bottom: 15px;
+            background: #f7fafc;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #edf2f7;
+        }
+
+        .item-title {
+            font-weight: bold;
+            color: #2d3748;
+            font-size: 11pt;
+        }
+
+        .item-meta {
+            font-size: 9pt;
+            color: #718096;
+            float: right;
+            font-weight: bold;
+        }
+
+        .item-subtitle {
+            color: #4a5568;
+            font-size: 9.5pt;
+            margin-top: 2px;
+            font-weight: 500;
+        }
+
+        p {
+            margin-top: 5px;
+            font-size: 9.5pt;
+            color: #4a5568;
+        }
+
+        .skills-tag {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #4a5568;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 8.5pt;
+            font-weight: bold;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="name">{{ name | default("FRESHER NAME") }}</div>
+        <div class="contact">
+            {{ email | default("email@address.com") }} | {{ phone | default("(555) 000-0000") }}
+            {% if linkedin %} | {{ linkedin }}{% endif %}
+            {% if github %} | {{ github }}{% endif %}
+        </div>
+    </div>
+
+    {% if summary %}
+    <div class="section-title">Objective</div>
+    <p>{{ summary }}</p>
+    {% endif %}
+
+    <div class="section-title">Education</div>
+    {% for edu in education %}
+    {% if edu.institution %}
+    <div class="grid-item">
+        <div class="item-title">{{ edu.degree }} <span class="item-meta">{{ edu.year }}</span></div>
+        <div class="item-subtitle">{{ edu.institution }}</div>
+    </div>
+    {% endif %}
+    {% else %}
+    <div class="grid-item">University Name - Degree</div>
+    {% endfor %}
+
+    <div class="section-title">Technical Skills</div>
+    <div>
+        {% if skills %}
+        {% for skill in skills %}
+        <span class="skills-tag">{{ skill }}</span>
+        {% endfor %}
+        {% else %}
+        <span class="skills-tag">Python</span><span class="skills-tag">React</span>
+        {% endif %}
+    </div>
+
+    {% if internships and internships[0].company %}
+    <div class="section-title">Internships</div>
+    {% for intern in internships %}
+    {% if intern.company %}
+    <div class="grid-item" style="background: white;">
+        <div class="item-title">{{ intern.role }} <span class="item-meta">{{ intern.duration }}</span></div>
+        <div class="item-subtitle">{{ intern.company }}</div>
+        <p>{{ intern.description }}</p>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+
+    {% if projects and projects[0].title %}
+    <div class="section-title">Academic Projects</div>
+    {% for proj in projects %}
+    {% if proj.title %}
+    <div class="grid-item" style="background: white;">
+        <div class="item-title">{{ proj.title }}</div>
+        {% if proj.technologies %}<div class="item-subtitle" style="color: #3182ce;">Tech Stack: {{ proj.technologies }}
+        </div>{% endif %}
+        <p>{{ proj.description }}</p>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+
+    {% if certifications and certifications[0].name %}
+    <div class="section-title">Certifications</div>
+    <ul>
+        {% for cert in certifications %}
+        {% if cert.name %}
+        <li><strong>{{ cert.name }}</strong> {% if cert.issuer %} - {{ cert.issuer }}{% endif %}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+
+</html>

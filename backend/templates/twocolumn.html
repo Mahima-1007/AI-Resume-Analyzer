@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        @page {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 10pt;
+            color: #333;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            display: table;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar {
+            width: 30%;
+            background-color: #1e3a8a;
+            color: white;
+            display: table-cell;
+            vertical-align: top;
+            padding: 40px 25px;
+            height: 100%;
+            min-height: 100vh;
+        }
+
+        .main {
+            width: 70%;
+            background-color: white;
+            display: table-cell;
+            vertical-align: top;
+            padding: 40px 35px;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            margin: 0;
+        }
+
+        .name-side {
+            font-size: 24pt;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            color: white;
+        }
+
+        .contact-item {
+            margin-bottom: 12px;
+            font-size: 9pt;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 5px;
+        }
+
+        .side-heading {
+            font-size: 13pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #60a5fa;
+            padding-bottom: 5px;
+            color: white;
+        }
+
+        .skill-item {
+            margin-bottom: 8px;
+            font-size: 9.5pt;
+            display: block;
+        }
+
+        /* Main Styles */
+        .main-heading {
+            font-size: 18pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #1e3a8a;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            margin-top: 25px;
+        }
+
+        .item {
+            margin-bottom: 25px;
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 12pt;
+            color: #111827;
+        }
+
+        .item-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 10pt;
+            color: #4f46e5;
+            font-weight: 500;
+        }
+
+        ul {
+            margin-top: 5px;
+            padding-left: 20px;
+            color: #4b5563;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1 class="name-side">{{ name | default("YOUR NAME") }}</h1>
+
+            <div class="side-heading">Contact</div>
+            <div class="contact-item">Email: {{ email | default("email@address.com") }}</div>
+            <div class="contact-item">Phone: {{ phone | default("555-0100") }}</div>
+
+            <div class="side-heading">Skills</div>
+            {% if skills %}
+            {% for skill in skills %}
+            <span class="skill-item">• {{ skill }}</span>
+            {% endfor %}
+            {% else %}
+            <span class="skill-item">• Skills List</span>
+            {% endif %}
+
+            <div class="side-heading">Education</div>
+            {% for edu in education %}
+            {% if edu.institution %}
+            <div style="margin-bottom: 15px;">
+                <strong style="display: block; font-size: 10pt;">{{ edu.degree }}</strong>
+                <span style="font-size: 9pt; opacity: 0.9;">{{ edu.institution }}</span><br />
+                <span style="font-size: 8pt; opacity: 0.7;">{{ edu.year }}</span>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="main">
+            {% if summary %}
+            <h2 class="main-heading">Profile</h2>
+            <p style="font-size: 10.5pt;">{{ summary }}</p>
+            {% endif %}
+
+            <h2 class="main-heading">Experience</h2>
+            {% for exp in experience %}
+            {% if exp.company %}
+            <div class="item">
+                <div class="item-title">{{ exp.role }}</div>
+                <div class="item-meta">
+                    <span style="float: left;">{{ exp.company }}</span>
+                    <span style="float: right;">{{ exp.duration }}</span>
+                    <div style="clear: both;"></div>
+                </div>
+                {% set bullets = exp.description.split('\n') %}
+                {% if bullets %}
+                <ul>
+                    {% for bullet in bullets %}
+                    {% if bullet.strip() %}<li>{{ bullet.strip().lstrip('•').strip() }}</li>{% endif %}
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            {% endif %}
+            {% else %}
+            <p>Experience goes here.</p>
+            {% endfor %}
+
+            {% if projects and projects[0].title %}
+            <h2 class="main-heading">Projects</h2>
+            {% for proj in projects %}
+            {% if proj.title %}
+            <div class="item">
+                <div class="item-title">{{ proj.title }}</div>
+                {% if proj.technologies %}<div style="font-size: 9pt; color: #4f46e5; margin-bottom: 5px;">{{
+                    proj.technologies }}</div>{% endif %}
+                <p style="margin-top: 5px; font-size: 10pt;">{{ proj.description }}</p>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</body>
+
+</html>

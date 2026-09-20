@@ -1,0 +1,642 @@
+[
+  {
+    "id": "q001", "role": "software_developer", "company": "google", "type": "mcq", "difficulty": "medium",
+    "question": "What is the time complexity of binary search?",
+    "options": ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
+    "answer": 1,
+    "explanation": "Binary search halves the search space at each step, giving O(log n) time complexity."
+  },
+  {
+    "id": "q002", "role": "software_developer", "company": "google", "type": "mcq", "difficulty": "hard",
+    "question": "Which data structure is used for implementing LRU Cache?",
+    "options": ["Stack", "Queue", "HashMap + Doubly Linked List", "Binary Tree"],
+    "answer": 2,
+    "explanation": "LRU Cache uses a HashMap for O(1) lookup and a Doubly Linked List for O(1) insertion/deletion."
+  },
+  {
+    "id": "q003", "role": "software_developer", "company": "amazon", "type": "mcq", "difficulty": "easy",
+    "question": "Which of the following is NOT a characteristic of Object-Oriented Programming?",
+    "options": ["Encapsulation", "Polymorphism", "Compilation", "Inheritance"],
+    "answer": 2,
+    "explanation": "Compilation is not an OOP concept. OOP pillars are Encapsulation, Inheritance, Polymorphism, and Abstraction."
+  },
+  {
+    "id": "q004", "role": "software_developer", "company": "amazon", "type": "aptitude", "difficulty": "easy",
+    "question": "If a train travels 300 km in 4 hours, what is its speed in km/h?",
+    "options": ["60", "70", "75", "80"],
+    "answer": 2,
+    "explanation": "Speed = Distance / Time = 300 / 4 = 75 km/h."
+  },
+  {
+    "id": "q005", "role": "software_developer", "company": "microsoft", "type": "mcq", "difficulty": "medium",
+    "question": "What does SOLID stand for in software engineering?",
+    "options": [
+      "Single, Open, Liskov, Interface, Dependency",
+      "Stack, Object, Linked, Interface, Dynamic",
+      "Single, Organized, Linked, Interface, Dependency",
+      "Structured, Open, Linked, Interface, Dynamic"
+    ],
+    "answer": 0,
+    "explanation": "SOLID: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion."
+  },
+  {
+    "id": "q006", "role": "software_developer", "company": "microsoft", "type": "mcq", "difficulty": "hard",
+    "question": "Which sorting algorithm has the best average-case performance?",
+    "options": ["Bubble Sort", "Insertion Sort", "Quick Sort", "Selection Sort"],
+    "answer": 2,
+    "explanation": "Quick Sort has O(n log n) average-case performance, making it one of the fastest sorting algorithms in practice."
+  },
+  {
+    "id": "q007", "role": "software_developer", "company": "meta", "type": "mcq", "difficulty": "medium",
+    "question": "What is the purpose of the 'virtual' keyword in C++?",
+    "options": [
+      "To define a constant variable",
+      "To enable runtime polymorphism via function overriding",
+      "To allocate memory on the heap",
+      "To declare an abstract class"
+    ],
+    "answer": 1,
+    "explanation": "The 'virtual' keyword enables runtime polymorphism by allowing derived class functions to override base class functions."
+  },
+  {
+    "id": "q008", "role": "software_developer", "company": "tcs", "type": "aptitude", "difficulty": "easy",
+    "question": "A shopkeeper sells an item at 20% profit. If the cost price is ₹500, what is the selling price?",
+    "options": ["₹550", "₹580", "₹600", "₹620"],
+    "answer": 2,
+    "explanation": "Selling Price = Cost Price × (1 + Profit%) = 500 × 1.20 = ₹600."
+  },
+  {
+    "id": "q009", "role": "software_developer", "company": "tcs", "type": "logical", "difficulty": "easy",
+    "question": "If all Bloops are Razzles and all Razzles are Lazzles, then are all Bloops definitely Lazzles?",
+    "options": ["Yes", "No", "Cannot be determined", "Only sometimes"],
+    "answer": 0,
+    "explanation": "By transitivity: Bloops → Razzles → Lazzles. Therefore all Bloops are definitely Lazzles."
+  },
+  {
+    "id": "q010", "role": "software_developer", "company": "infosys", "type": "mcq", "difficulty": "easy",
+    "question": "What is the output of print(2**10) in Python?",
+    "options": ["20", "100", "1024", "2048"],
+    "answer": 2,
+    "explanation": "In Python, ** is the power operator. 2**10 = 2^10 = 1024."
+  },
+  {
+    "id": "q011", "role": "software_developer", "company": "infosys", "type": "behavioural", "difficulty": "easy",
+    "question": "Describe your approach when working on a project with a tight deadline.",
+    "options": [
+      "Prioritize tasks based on impact, communicate progress regularly, and break work into milestones",
+      "Work overtime without informing the team",
+      "Ask for a deadline extension immediately",
+      "Skip testing to meet the deadline"
+    ],
+    "answer": 0,
+    "explanation": "Effective time management, team communication, and prioritization are key to meeting tight deadlines professionally."
+  },
+  {
+    "id": "q012", "role": "software_developer", "company": "google", "type": "mcq", "difficulty": "hard",
+    "question": "In a graph with V vertices and E edges, what is the time complexity of Dijkstra's algorithm using a min-heap?",
+    "options": ["O(V²)", "O(E + V log V)", "O(V log E)", "O(E log V)"],
+    "answer": 1,
+    "explanation": "Using a min-heap (priority queue), Dijkstra's runs in O(E + V log V) where E is edges and V is vertices."
+  },
+  {
+    "id": "q013", "role": "software_developer", "company": "general", "type": "mcq", "difficulty": "medium",
+    "question": "Which HTTP method is typically used to update an existing resource?",
+    "options": ["GET", "POST", "PUT", "DELETE"],
+    "answer": 2,
+    "explanation": "PUT is used to update/replace an existing resource. PATCH is used for partial updates."
+  },
+  {
+    "id": "q014", "role": "software_developer", "company": "general", "type": "mcq", "difficulty": "easy",
+    "question": "What does SQL stand for?",
+    "options": [
+      "Structured Query Language",
+      "Simple Query Language",
+      "Standard Query Level",
+      "Structured Question Language"
+    ],
+    "answer": 0,
+    "explanation": "SQL stands for Structured Query Language, used to manage and query relational databases."
+  },
+  {
+    "id": "q015", "role": "software_developer", "company": "general", "type": "aptitude", "difficulty": "medium",
+    "question": "A pipe can fill a tank in 6 hours, another can fill it in 12 hours. How long to fill together?",
+    "options": ["3 hours", "4 hours", "5 hours", "6 hours"],
+    "answer": 1,
+    "explanation": "Combined rate = 1/6 + 1/12 = 3/12 = 1/4. Time = 4 hours."
+  },
+  {
+    "id": "q016", "role": "software_developer", "company": "general", "type": "logical", "difficulty": "medium",
+    "question": "Next in series: 2, 6, 12, 20, 30, ?",
+    "options": ["40", "42", "44", "48"],
+    "answer": 1,
+    "explanation": "Pattern: n*(n+1). 1×2=2, 2×3=6, 3×4=12, 4×5=20, 5×6=30, 6×7=42."
+  },
+  {
+    "id": "q017", "role": "software_developer", "company": "general", "type": "mcq", "difficulty": "medium",
+    "question": "What is a deadlock in operating systems?",
+    "options": [
+      "When a process takes too long",
+      "When two or more processes wait for each other's resources indefinitely",
+      "When the CPU is idle",
+      "When memory is full"
+    ],
+    "answer": 1,
+    "explanation": "A deadlock occurs when two or more processes are permanently blocked, each waiting for a resource held by the other."
+  },
+  {
+    "id": "q018", "role": "software_developer", "company": "general", "type": "mcq", "difficulty": "easy",
+    "question": "What is the role of an index in a database?",
+    "options": [
+      "To store backup data",
+      "To speed up data retrieval",
+      "To encrypt sensitive data",
+      "To remove duplicates"
+    ],
+    "answer": 1,
+    "explanation": "Database indexes speed up data retrieval by allowing the DB engine to find rows without full table scans."
+  },
+  {
+    "id": "q019", "role": "software_developer", "company": "general", "type": "mcq", "difficulty": "hard",
+    "question": "Which design pattern ensures a class has only one instance?",
+    "options": ["Factory", "Observer", "Singleton", "Decorator"],
+    "answer": 2,
+    "explanation": "The Singleton pattern restricts instantiation of a class to one single instance."
+  },
+  {
+    "id": "q020", "role": "software_developer", "company": "general", "type": "behavioural", "difficulty": "medium",
+    "question": "How do you handle disagreements with a team member on a technical approach?",
+    "options": [
+      "Force your solution without discussion",
+      "Discuss pros and cons of each approach with data, escalate if needed",
+      "Always agree to avoid conflict",
+      "Ignore the disagreement"
+    ],
+    "answer": 1,
+    "explanation": "Professional disagreements are resolved through evidence-based discussion, documentation, and sometimes compromise or escalation."
+  },
+  {
+    "id": "q021", "role": "data_analyst", "company": "general", "type": "mcq", "difficulty": "easy",
+    "question": "Which Python library is primarily used for data manipulation?",
+    "options": ["NumPy", "Matplotlib", "Pandas", "Scikit-learn"],
+    "answer": 2,
+    "explanation": "Pandas provides DataFrames and Series for efficient data manipulation and analysis."
+  },
+  {
+    "id": "q022", "role": "data_analyst", "company": "google", "type": "mcq", "difficulty": "medium",
+    "question": "What does a high p-value (> 0.05) typically indicate in hypothesis testing?",
+    "options": [
+      "Reject the null hypothesis",
+      "Fail to reject the null hypothesis",
+      "The test is inconclusive",
+      "The data is normally distributed"
+    ],
+    "answer": 1,
+    "explanation": "A high p-value (>0.05) indicates insufficient evidence to reject the null hypothesis."
+  },
+  {
+    "id": "q023", "role": "data_analyst", "company": "amazon", "type": "mcq", "difficulty": "medium",
+    "question": "What is the difference between INNER JOIN and LEFT JOIN in SQL?",
+    "options": [
+      "INNER JOIN returns all rows from both tables",
+      "LEFT JOIN returns all rows from the left table, INNER JOIN returns only matching rows",
+      "They are identical",
+      "LEFT JOIN is faster than INNER JOIN"
+    ],
+    "answer": 1,
+    "explanation": "INNER JOIN returns only matched rows. LEFT JOIN returns all rows from the left table, with NULLs for unmatched right table rows."
+  },
+  {
+    "id": "q024", "role": "data_analyst", "company": "general", "type": "mcq", "difficulty": "easy",
+    "question": "Which chart type is best for showing the distribution of a single numeric variable?",
+    "options": ["Bar Chart", "Pie Chart", "Histogram", "Line Chart"],
+    "answer": 2,
+    "explanation": "A Histogram shows the frequency distribution of a single numeric variable across bins/intervals."
+  },
+  {
+    "id": "q025", "role": "data_analyst", "company": "general", "type": "mcq", "difficulty": "hard",
+    "question": "What is overfitting in machine learning?",
+    "options": [
+      "Model performs well on training data but poorly on unseen data",
+      "Model performs poorly on training data",
+      "Model has too few parameters",
+      "Model ignores noise in data"
+    ],
+    "answer": 0,
+    "explanation": "Overfitting occurs when a model memorizes training data too closely, losing ability to generalize to new data."
+  },
+  {
+    "id": "q026", "role": "data_analyst", "company": "general", "type": "aptitude", "difficulty": "easy",
+    "question": "In a dataset of [10, 20, 30, 40, 50], what is the median?",
+    "options": ["20", "30", "40", "25"],
+    "answer": 1,
+    "explanation": "The median is the middle value when sorted. For 5 values, it's the 3rd value = 30."
+  },
+  {
+    "id": "q027", "role": "data_analyst", "company": "general", "type": "mcq", "difficulty": "medium",
+    "question": "What does ETL stand for in data engineering?",
+    "options": [
+      "Extract, Transform, Load",
+      "Export, Transfer, Load",
+      "Extract, Transfer, Link",
+      "Evaluate, Transform, Load"
+    ],
+    "answer": 0,
+    "explanation": "ETL: Extract data from source, Transform it to fit requirements, Load it into the target system."
+  },
+  {
+    "id": "q028", "role": "data_analyst", "company": "general", "type": "logical", "difficulty": "medium",
+    "question": "A company has 200 employees. 60% work in sales. How many do NOT work in sales?",
+    "options": ["60", "80", "100", "120"],
+    "answer": 1,
+    "explanation": "Sales = 200 × 0.60 = 120. Non-sales = 200 - 120 = 80."
+  },
+  {
+    "id": "q029", "role": "data_analyst", "company": "general", "type": "mcq", "difficulty": "medium",
+    "question": "What is the correlation coefficient range?",
+    "options": ["0 to 1", "-1 to 0", "-1 to 1", "0 to 100"],
+    "answer": 2,
+    "explanation": "The Pearson correlation coefficient ranges from -1 (perfect negative) to +1 (perfect positive)."
+  },
+  {
+    "id": "q030", "role": "data_analyst", "company": "general", "type": "behavioural", "difficulty": "easy",
+    "question": "How do you explain a complex data finding to a non-technical stakeholder?",
+    "options": [
+      "Use technical jargon and raw numbers",
+      "Avoid explaining and just show charts",
+      "Use simple language, visual aids, and business impact framing",
+      "Send a detailed report and wait for questions"
+    ],
+    "answer": 2,
+    "explanation": "Non-technical stakeholders need clear language, visuals, and business context rather than technical explanations."
+  },
+  {
+    "id": "q031", "role": "ai_ml_engineer", "company": "google", "type": "mcq", "difficulty": "medium",
+    "question": "What is the vanishing gradient problem in neural networks?",
+    "options": [
+      "Gradients become too large during backpropagation",
+      "Gradients become very small, slowing or stopping learning in early layers",
+      "The network forgets training data",
+      "Activation functions stop working"
+    ],
+    "answer": 1,
+    "explanation": "In deep networks, gradients shrink exponentially during backpropagation, making early layers learn very slowly."
+  },
+  {
+    "id": "q032", "role": "ai_ml_engineer", "company": "general", "type": "mcq", "difficulty": "easy",
+    "question": "What activation function is most commonly used in the output layer for binary classification?",
+    "options": ["ReLU", "Sigmoid", "Tanh", "Softmax"],
+    "answer": 1,
+    "explanation": "Sigmoid outputs values between 0 and 1, making it ideal for binary classification probability output."
+  },
+  {
+    "id": "q033", "role": "ai_ml_engineer", "company": "amazon", "type": "mcq", "difficulty": "hard",
+    "question": "Which regularization technique randomly drops neurons during training?",
+    "options": ["L1 regularization", "L2 regularization", "Dropout", "Batch Normalization"],
+    "answer": 2,
+    "explanation": "Dropout randomly deactivates neurons during training to prevent co-adaptation and overfitting."
+  },
+  {
+    "id": "q034", "role": "ai_ml_engineer", "company": "general", "type": "mcq", "difficulty": "medium",
+    "question": "What is the purpose of the learning rate in gradient descent?",
+    "options": [
+      "Controls network depth",
+      "Controls the size of steps taken towards the minimum of the loss function",
+      "Controls the number of epochs",
+      "Controls the batch size"
+    ],
+    "answer": 1,
+    "explanation": "The learning rate determines how large each weight update step is during gradient descent optimization."
+  },
+  {
+    "id": "q035", "role": "ai_ml_engineer", "company": "general", "type": "mcq", "difficulty": "hard",
+    "question": "What does BERT stand for?",
+    "options": [
+      "Bidirectional Encoder Representations from Transformers",
+      "Binary Encoding for Representations and Text",
+      "Balanced Encoder for Recurrent Transformers",
+      "Bidirectional Encoding for Recurrent Training"
+    ],
+    "answer": 0,
+    "explanation": "BERT: Bidirectional Encoder Representations from Transformers — a pre-trained language model by Google."
+  },
+  {
+    "id": "q036", "role": "ai_ml_engineer", "company": "general", "type": "mcq", "difficulty": "medium",
+    "question": "What is the difference between supervised and unsupervised learning?",
+    "options": [
+      "Supervised uses labeled data, unsupervised doesn't",
+      "Unsupervised uses labeled data, supervised doesn't",
+      "They are the same",
+      "Supervised only works for images"
+    ],
+    "answer": 0,
+    "explanation": "Supervised learning uses labeled training data. Unsupervised learning finds patterns in unlabeled data."
+  },
+  {
+    "id": "q037", "role": "ai_ml_engineer", "company": "general", "type": "aptitude", "difficulty": "medium",
+    "question": "A model is 90% accurate on 1000 samples. How many samples does it classify correctly?",
+    "options": ["800", "850", "900", "950"],
+    "answer": 2,
+    "explanation": "90% of 1000 = 900 correctly classified samples."
+  },
+  {
+    "id": "q038", "role": "ai_ml_engineer", "company": "general", "type": "mcq", "difficulty": "hard",
+    "question": "Which metric is best for evaluating a model on an imbalanced dataset?",
+    "options": ["Accuracy", "F1-Score", "Mean Squared Error", "R² Score"],
+    "answer": 1,
+    "explanation": "F1-Score balances precision and recall, making it suitable for imbalanced datasets where accuracy can be misleading."
+  },
+  {
+    "id": "q039", "role": "ai_ml_engineer", "company": "general", "type": "logical", "difficulty": "easy",
+    "question": "If a model predicts 'cat' for 95% of images in a dataset where 95% are actually cats, is this a good model?",
+    "options": [
+      "Yes, 95% accuracy is excellent",
+      "No, the model just predicts the majority class and adds no value",
+      "Cannot be determined",
+      "It depends on the dataset size"
+    ],
+    "answer": 1,
+    "explanation": "A model predicting the majority class always achieves high accuracy on imbalanced data but learns nothing."
+  },
+  {
+    "id": "q040", "role": "ai_ml_engineer", "company": "general", "type": "behavioural", "difficulty": "medium",
+    "question": "How do you handle a situation where your ML model performs well in testing but fails in production?",
+    "options": [
+      "Ignore production failures and use test metrics",
+      "Investigate data drift, distribution shift, and feature pipeline differences between test and production",
+      "Retrain the model repeatedly",
+      "Replace the model immediately with a simpler one"
+    ],
+    "answer": 1,
+    "explanation": "Production failures often stem from data drift, training-serving skew, or differences in preprocessing pipelines."
+  },
+  {
+    "id": "q041", "role": "cybersecurity_analyst", "company": "general", "type": "mcq", "difficulty": "easy",
+    "question": "What does SQL injection allow an attacker to do?",
+    "options": [
+      "Crash the server",
+      "Execute arbitrary SQL commands on the database",
+      "Intercept network traffic",
+      "Gain physical access to servers"
+    ],
+    "answer": 1,
+    "explanation": "SQL injection allows attackers to manipulate database queries by inserting malicious SQL code into input fields."
+  },
+  {
+    "id": "q042", "role": "cybersecurity_analyst", "company": "general", "type": "mcq", "difficulty": "medium",
+    "question": "What is a man-in-the-middle (MITM) attack?",
+    "options": [
+      "Attacker physically intercepts communication hardware",
+      "Attacker secretly relays/alters communication between two parties who believe they're communicating directly",
+      "Attacker floods the server with requests",
+      "Attacker steals passwords from databases"
+    ],
+    "answer": 1,
+    "explanation": "In a MITM attack, the attacker intercepts and potentially alters communications between two parties."
+  },
+  {
+    "id": "q043", "role": "cybersecurity_analyst", "company": "general", "type": "mcq", "difficulty": "hard",
+    "question": "Which cryptographic algorithm is considered asymmetric?",
+    "options": ["AES", "DES", "RSA", "3DES"],
+    "answer": 2,
+    "explanation": "RSA is an asymmetric algorithm using a public/private key pair. AES, DES, 3DES are symmetric (same key)."
+  },
+  {
+    "id": "q044", "role": "cybersecurity_analyst", "company": "general", "type": "mcq", "difficulty": "medium",
+    "question": "What is the purpose of a firewall?",
+    "options": [
+      "To speed up network connections",
+      "To encrypt data at rest",
+      "To monitor and control incoming/outgoing network traffic based on security rules",
+      "To back up network data"
+    ],
+    "answer": 2,
+    "explanation": "A firewall filters network traffic based on predefined security rules to allow or block connections."
+  },
+  {
+    "id": "q045", "role": "cybersecurity_analyst", "company": "general", "type": "mcq", "difficulty": "easy",
+    "question": "What does HTTPS stand for?",
+    "options": [
+      "HyperText Transmission Protocol Secure",
+      "HyperText Transfer Protocol Secure",
+      "Hyper Transfer Text Protocol Secure",
+      "High Transport Protocol Secure"
+    ],
+    "answer": 1,
+    "explanation": "HTTPS is HTTP with TLS/SSL encryption for secure communication over the network."
+  },
+  {
+    "id": "q046", "role": "cybersecurity_analyst", "company": "general", "type": "aptitude", "difficulty": "medium",
+    "question": "A password has 8 characters using uppercase, lowercase, and digits (62 options each). How many combinations?",
+    "options": ["62^7", "62^8", "8×62", "62×8!"],
+    "answer": 1,
+    "explanation": "With 62 options per character and 8 positions, total combinations = 62^8 ≈ 218 trillion combinations."
+  },
+  {
+    "id": "q047", "role": "cybersecurity_analyst", "company": "general", "type": "logical", "difficulty": "medium",
+    "question": "If only authenticated users can access the admin panel and User A accessed it without credentials, what likely happened?",
+    "options": [
+      "Server error",
+      "Authentication bypass vulnerability was exploited",
+      "User A is a superadmin",
+      "Database was down"
+    ],
+    "answer": 1,
+    "explanation": "Accessing protected resources without credentials indicates an authentication bypass vulnerability (e.g., broken access control)."
+  },
+  {
+    "id": "q048", "role": "cybersecurity_analyst", "company": "general", "type": "mcq", "difficulty": "hard",
+    "question": "What is the OWASP Top 10?",
+    "options": [
+      "Top 10 programming languages for security",
+      "Top 10 cybersecurity certifications",
+      "List of the 10 most critical web application security risks",
+      "Top 10 antivirus software"
+    ],
+    "answer": 2,
+    "explanation": "OWASP Top 10 is a standard list of the 10 most critical web application security risks, updated periodically."
+  },
+  {
+    "id": "q049", "role": "cybersecurity_analyst", "company": "general", "type": "behavioural", "difficulty": "easy",
+    "question": "A colleague asks for your system password 'just for a few minutes'. What do you do?",
+    "options": [
+      "Share it since they're a trusted colleague",
+      "Share it but change it immediately after",
+      "Refuse and offer to help them complete the task yourself",
+      "Report them to HR immediately"
+    ],
+    "answer": 2,
+    "explanation": "Password sharing violates security policy. Offer to assist directly instead of sharing credentials."
+  },
+  {
+    "id": "q050", "role": "cybersecurity_analyst", "company": "general", "type": "mcq", "difficulty": "medium",
+    "question": "What is two-factor authentication (2FA)?",
+    "options": [
+      "Using two passwords",
+      "A security process requiring two different forms of verification",
+      "Encrypting data twice",
+      "Two users approving a login"
+    ],
+    "answer": 1,
+    "explanation": "2FA requires two forms of verification (e.g., password + OTP) to prove identity before granting access."
+  },
+  {
+    "id": "q051", "role": "full_stack_developer", "company": "general", "type": "mcq", "difficulty": "easy",
+    "question": "What does REST stand for?",
+    "options": [
+      "Reliable State Transfer",
+      "Representational State Transfer",
+      "Remote State Transfer",
+      "Responsive State Technology"
+    ],
+    "answer": 1,
+    "explanation": "REST: Representational State Transfer — an architectural style for designing networked applications."
+  },
+  {
+    "id": "q052", "role": "full_stack_developer", "company": "general", "type": "mcq", "difficulty": "medium",
+    "question": "What is the purpose of the useEffect hook in React?",
+    "options": [
+      "To manage component state",
+      "To handle side effects like API calls, subscriptions, and DOM updates",
+      "To render a component conditionally",
+      "To define component styles"
+    ],
+    "answer": 1,
+    "explanation": "useEffect handles side effects in React functional components, replacing lifecycle methods like componentDidMount."
+  },
+  {
+    "id": "q053", "role": "full_stack_developer", "company": "general", "type": "mcq", "difficulty": "medium",
+    "question": "Which status code indicates a resource was successfully created?",
+    "options": ["200 OK", "201 Created", "204 No Content", "301 Moved Permanently"],
+    "answer": 1,
+    "explanation": "HTTP 201 Created is the correct response for a successful POST request that creates a new resource."
+  },
+  {
+    "id": "q054", "role": "full_stack_developer", "company": "general", "type": "mcq", "difficulty": "hard",
+    "question": "What is CORS and why is it important?",
+    "options": [
+      "Cross-Origin Resource Sharing — controls how web pages request resources from another domain",
+      "Client-Oriented Request System",
+      "Content Origin Response Schema",
+      "A database connection protocol"
+    ],
+    "answer": 0,
+    "explanation": "CORS is a browser security mechanism that restricts how web pages make requests to different domains/origins."
+  },
+  {
+    "id": "q055", "role": "full_stack_developer", "company": "general", "type": "mcq", "difficulty": "easy",
+    "question": "In JavaScript, what does 'undefined' mean?",
+    "options": [
+      "A variable has been declared but not assigned a value",
+      "A variable does not exist",
+      "A variable holds an empty string",
+      "A function has no return statement"
+    ],
+    "answer": 0,
+    "explanation": "'undefined' is the default value of a variable that has been declared but not yet assigned a value."
+  },
+  {
+    "id": "q056", "role": "full_stack_developer", "company": "general", "type": "mcq", "difficulty": "medium",
+    "question": "What is the difference between localStorage and sessionStorage?",
+    "options": [
+      "localStorage persists until cleared, sessionStorage clears when the browser tab closes",
+      "sessionStorage persists indefinitely, localStorage clears on page refresh",
+      "They are identical",
+      "localStorage is server-side, sessionStorage is client-side"
+    ],
+    "answer": 0,
+    "explanation": "localStorage persists across sessions. sessionStorage is cleared when the browser tab/window is closed."
+  },
+  {
+    "id": "q057", "role": "full_stack_developer", "company": "general", "type": "mcq", "difficulty": "hard",
+    "question": "What is a JWT (JSON Web Token) used for?",
+    "options": [
+      "To format API responses as JSON",
+      "To securely transmit authentication information between parties as a digitally signed token",
+      "To encrypt database records",
+      "To compress API responses"
+    ],
+    "answer": 1,
+    "explanation": "JWT is a compact, digitally signed token used for authentication and information exchange between parties."
+  },
+  {
+    "id": "q058", "role": "full_stack_developer", "company": "general", "type": "mcq", "difficulty": "medium",
+    "question": "What is the virtual DOM in React?",
+    "options": [
+      "A copy of the DOM stored on the server",
+      "A lightweight in-memory representation of the real DOM used for efficient updates",
+      "A CSS framework for React",
+      "A React-specific database"
+    ],
+    "answer": 1,
+    "explanation": "React's virtual DOM is an in-memory object tree. React diffs it with the real DOM and applies minimal updates."
+  },
+  {
+    "id": "q059", "role": "full_stack_developer", "company": "general", "type": "aptitude", "difficulty": "easy",
+    "question": "A web page loads 10 images, each 200KB. What is the total download size?",
+    "options": ["1MB", "2MB", "2.5MB", "4MB"],
+    "answer": 1,
+    "explanation": "10 images × 200KB = 2000KB = 2MB total download size."
+  },
+  {
+    "id": "q060", "role": "full_stack_developer", "company": "general", "type": "mcq", "difficulty": "hard",
+    "question": "What does 'async/await' do in JavaScript?",
+    "options": [
+      "Runs code in parallel threads",
+      "Makes asynchronous code look and behave like synchronous code using Promises",
+      "Creates new web workers",
+      "Caches API responses"
+    ],
+    "answer": 1,
+    "explanation": "async/await syntax makes promise-based code more readable by letting you write asynchronous code in a synchronous style."
+  },
+  {
+    "id": "q061", "role": "software_developer", "company": "general", "type": "mcq", "difficulty": "medium",
+    "question": "What is the difference between process and thread?",
+    "options": [
+      "A process is a program in execution; a thread is the smallest unit of execution within a process",
+      "A thread is a full program; a process is part of a thread",
+      "They are the same",
+      "A process runs in user space; a thread runs in kernel space only"
+    ],
+    "answer": 0,
+    "explanation": "A process is an independent program instance with its own memory. Threads are lighter-weight units that share process memory."
+  },
+  {
+    "id": "q062", "role": "software_developer", "company": "general", "type": "mcq", "difficulty": "easy",
+    "question": "What is Git used for?",
+    "options": [
+      "Project management",
+      "Version control and tracking code changes",
+      "Database management",
+      "Network monitoring"
+    ],
+    "answer": 1,
+    "explanation": "Git is a distributed version control system used to track code changes, collaborate, and manage software history."
+  },
+  {
+    "id": "q063", "role": "software_developer", "company": "general", "type": "logical", "difficulty": "hard",
+    "question": "You have a sorted array and need to find if a target value exists. Which algorithm is most efficient?",
+    "options": ["Linear Search O(n)", "Binary Search O(log n)", "Hash Lookup O(1)", "Jump Search O(√n)"],
+    "answer": 1,
+    "explanation": "For sorted arrays, Binary Search is the most efficient standard algorithm at O(log n)."
+  },
+  {
+    "id": "q064", "role": "data_analyst", "company": "microsoft", "type": "mcq", "difficulty": "medium",
+    "question": "In Excel, what function finds and returns a value from a table based on a lookup value?",
+    "options": ["SUMIF", "COUNTIF", "VLOOKUP", "INDEX"],
+    "answer": 2,
+    "explanation": "VLOOKUP (Vertical Lookup) searches for a value in the first column of a range and returns a value from a specified column."
+  },
+  {
+    "id": "q065", "role": "data_analyst", "company": "general", "type": "mcq", "difficulty": "hard",
+    "question": "What is the Central Limit Theorem?",
+    "options": [
+      "All data follows a normal distribution",
+      "As sample size grows, the sampling distribution of the mean approaches normal distribution",
+      "Large samples always have less variance",
+      "The mean of a population equals its sample mean"
+    ],
+    "answer": 1,
+    "explanation": "CLT states that with sufficiently large samples, the sampling distribution of the mean will be approximately normally distributed."
+  }
+]

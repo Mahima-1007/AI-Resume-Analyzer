@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            font-size: 11pt;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .name {
+            font-size: 24pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .contact {
+            font-size: 10pt;
+            color: #555;
+        }
+
+        .section-title {
+            font-size: 14pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #ccc;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            padding-bottom: 3px;
+        }
+
+        .item {
+            margin-bottom: 10px;
+        }
+
+        .item-title {
+            font-weight: bold;
+        }
+
+        .item-subtitle {
+            font-style: italic;
+            color: #666;
+            font-size: 10pt;
+        }
+
+        .list-unstyled {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 5px;
+        }
+
+        ul {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+
+        .skills-list {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="name">{{ name | default("Your Name") }}</div>
+        <div class="contact">
+            {{ email | default("email@example.com") }} | {{ phone | default("+1 234 567 8900") }}
+        </div>
+    </div>
+
+    {% if summary %}
+    <div class="section-title">Professional Summary</div>
+    <div class="item">
+        <p>{{ summary }}</p>
+    </div>
+    {% endif %}
+
+    <div class="section-title">Skills</div>
+    <div class="item">
+        <p class="skills-list">{{ skills | join(', ') if skills else "Your Skills Here" }}</p>
+    </div>
+
+    <div class="section-title">Experience</div>
+    {% for exp in experience %}
+    {% if exp.company %}
+    <div class="item">
+        <div class="item-title">{{ exp.company }} <span style="font-weight: normal; float: right;">{{ exp.duration
+                }}</span></div>
+        <div class="item-subtitle">{{ exp.role }}</div>
+        {% set bullets = exp.description.split('\n') %}
+        {% if bullets %}
+        <ul>
+            {% for bullet in bullets %}
+            {% if bullet.strip() %}<li>{{ bullet.strip().lstrip('•').strip() }}</li>{% endif %}
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    {% endif %}
+    {% else %}
+    <div class="item">
+        <div class="item-title">Company Name</div>
+        <div class="item-subtitle">Role | Date</div>
+        <p>Description of achievements.</p>
+    </div>
+    {% endfor %}
+
+    <div class="section-title">Education</div>
+    {% for edu in education %}
+    {% if edu.institution %}
+    <div class="item">
+        <div class="item-title">{{ edu.institution }} <span style="font-weight: normal; float: right;">{{ edu.year
+                }}</span></div>
+        <div class="item-subtitle">{{ edu.degree }}</div>
+    </div>
+    {% endif %}
+    {% else %}
+    <div class="item">
+        <div class="item-title">University Name</div>
+        <div class="item-subtitle">Degree | Year</div>
+    </div>
+    {% endfor %}
+</body>
+
+</html>
